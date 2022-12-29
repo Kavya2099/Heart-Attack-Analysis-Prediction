@@ -5,7 +5,7 @@
 <p align="center">
 <img src="https://cdn.dribbble.com/users/2154580/screenshots/6452241/atemlos_loop_heart_v1.0_chriseff_dribbble.gif" width="500" height="400" />
 </p>
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 It is classification model created to predict whether the patient has chance of getting heart attack or not based on the clinical parameters.
 Created using Kaggle noteboook
