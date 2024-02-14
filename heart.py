@@ -7,7 +7,10 @@ import xgboost
 
 # loading the saved model
 
-price_model = pickle.load(open('finalized_model_classification.sav', 'rb'))
+#price_model = pickle.load(open('finalized_model_classification.sav', 'rb'))
+
+loaded_model = xgboost.Booster()
+loaded_model.load_model('xgb_model.bin')
 
 
 # page title
@@ -79,8 +82,9 @@ if st.button('Predict'):
             'thalachh': [thalachh]
         })
 
+    dtest = xgboost.DMatrix(data_1)
 
-    prediction = price_model.predict(data_1)
+    prediction = loaded_model.predict(dtest)
     if prediction == 0:
         #st.write('Patient has no risk of Heart Attack')
         st.markdown("<h2 style='text-align: center; color: green;'>Patient has no risk of Heart Attack</h2>", unsafe_allow_html=True)
