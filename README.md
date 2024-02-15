@@ -98,5 +98,7 @@ target: Heart disease (1 = no, 0= yes)
 - Applying **Decision tree classification, Random forest classifiaction and XGB classification** algorithms with different feature parameters and picking up the best model based on AUC score and accuracy
 - Used **Matplotlib and Seaborn Heatmap** for visualization
 
+References:
 
+https://towardsdatascience.com/heart-disease-uci-diagnosis-prediction-b1943ee835a7
 
