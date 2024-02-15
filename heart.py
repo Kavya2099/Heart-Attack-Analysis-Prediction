@@ -2,6 +2,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 import xgboost
+import numpy as np
 
 #from streamlit_option_menu import option_menu
 
@@ -85,6 +86,9 @@ if st.button('Predict'):
     dtest = xgboost.DMatrix(data_1)
 
     prediction = loaded_model.predict(dtest)
+    threshold = 0.5
+    prediction = np.where(prediction >= threshold, 1, 0)
+    #st.write(prediction)
     if prediction == 0:
         #st.write('Patient has no risk of Heart Attack')
         st.markdown("<h2 style='text-align: center; color: green;'>Patient has no risk of Heart Attack</h2>", unsafe_allow_html=True)
