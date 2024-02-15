@@ -91,7 +91,7 @@ Value 3: reversible defect (a blood flow is observed but it is not normal)
 target: Heart disease (1 = no, 0= yes)
 
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Things implemented
 
 - Exploratory Data Analysis
 - Finding **Mutual information** with the target feature
