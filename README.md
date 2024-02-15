@@ -14,6 +14,28 @@ Dataset: https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysi
 
 Kaggle link: https://www.kaggle.com/code/kavya2099/heart-attack-analysis-prediction/notebook
 
+Link to access streamlit: https://heart-attack-analysis-prediction.streamlit.app/
+
+## Introduction
+
+Heart disease is a major health concern worldwide, accounting for a significant number of deaths each year. Early detection and prevention are crucial in managing this condition. Machine learning models offer a promising approach to predicting the likelihood of heart attacks based on clinical parameters. In this study, we have developed a classification model to predict whether a patient is at risk of experiencing a heart attack based on their clinical parameters.
+
+## Problem Statement
+
+The aim of this study is to develop a reliable classification model that can predict the likelihood of a patient experiencing a heart attack based on their clinical parameters. By accurately identifying individuals at risk, healthcare providers can intervene early with targeted interventions and lifestyle modifications to reduce the risk of heart disease and improve patient outcomes.
+
+**Code flow**
+
+        * Data processing
+        * EDA
+        * Feature Engineering
+        * Scaling and Normalization
+        * Model Selection and Evaluation
+        * Test the model
+        * Deploying the model
+
+**Data**
+
 Input the below information to check whether the patient has risk of heart attack or not
 
 Age : Age of the patient
@@ -68,7 +90,6 @@ Value 3: reversible defect (a blood flow is observed but it is not normal)
 
 target: Heart disease (1 = no, 0= yes)
 
-Link to access streamlit: https://heart-attack-analysis-prediction.streamlit.app/
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
