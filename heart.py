@@ -70,28 +70,30 @@ caa = st.selectbox('Enter caa(coronary artery anomaly) value(number of major ves
 thall = st.selectbox('Enter thalassemia value',(0,1,2,3))
 
 
-features=['thall','caa','cp','oldpeak','exng','chol','thalachh']
+features_values={'age':age,'trtbps':trtbps,'chol':chol,'thalachh':thalachh,'oldpeak':oldpeak}
 
 if st.button('Predict'):
-
-    data_1 = pd.DataFrame({'thall': [thall],
-            'caa': [caa],
-            'cp': [cp],
-            'oldpeak': [oldpeak],
-            'exng': [exng],
-            'chol': [chol],
-            'thalachh': [thalachh]
-        })
-
-    dtest = xgboost.DMatrix(data_1)
-
-    prediction = loaded_model.predict(dtest)
-    threshold = 0.5
-    prediction = np.where(prediction >= threshold, 1, 0)
-    #st.write(prediction)
-    if prediction == 0:
-        #st.write('Patient has no risk of Heart Attack')
-        st.markdown("<h2 style='text-align: center; color: green;'>Patient has no risk of Heart Attack</h2>", unsafe_allow_html=True)
+    if any(value == 0 or value == 0.00 for value in features_values.values()):
+        st.warning('Please input all the details.')
     else:
-        #st.write('Patient has risk of Heart Attack')
-        st.markdown("<h2 style='text-align: center; color: red;'>Patient has risk of Heart Attack</h2>", unsafe_allow_html=True)
+        data_1 = pd.DataFrame({'thall': [thall],
+                'caa': [caa],
+                'cp': [cp],
+                'oldpeak': [oldpeak],
+                'exng': [exng],
+                'chol': [chol],
+                'thalachh': [thalachh]
+            })
+
+        dtest = xgboost.DMatrix(data_1)
+
+        prediction = loaded_model.predict(dtest)
+        threshold = 0.5
+        prediction = np.where(prediction >= threshold, 1, 0)
+        #st.write(prediction)
+        if prediction == 0:
+            #st.write('Patient has no risk of Heart Attack')
+            st.markdown("<h2 style='text-align: center; color: green;'>Patient has no risk of Heart Attack</h2>", unsafe_allow_html=True)
+        else:
+            #st.write('Patient has risk of Heart Attack')
+            st.markdown("<h2 style='text-align: center; color: red;'>Patient has risk of Heart Attack</h2>", unsafe_allow_html=True)
