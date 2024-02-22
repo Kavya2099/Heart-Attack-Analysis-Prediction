@@ -101,7 +101,7 @@ target: Heart disease (1 = no, 0= yes)
 - Finding **Mutual information** with the target feature
 - Applying **Decision tree classification, Random forest classifiaction and XGB classification** algorithms with different feature parameters and picking up the best model based on AUC score and accuracy
 - Used **Matplotlib and Seaborn Heatmap** for visualization
-- 
+  
 ## Deploying model
 
 * Implemented the model in **Streamlit**.
@@ -113,6 +113,7 @@ target: Heart disease (1 = no, 0= yes)
 * Trying out other Feature selection methods
 * Using Z scores to treat outliers
 * Applying other classification algorithms
+* Implementing more EDA concepts
 
 ## References:
 
