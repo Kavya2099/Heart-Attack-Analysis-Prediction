@@ -101,6 +101,18 @@ target: Heart disease (1 = no, 0= yes)
 - Finding **Mutual information** with the target feature
 - Applying **Decision tree classification, Random forest classifiaction and XGB classification** algorithms with different feature parameters and picking up the best model based on AUC score and accuracy
 - Used **Matplotlib and Seaborn Heatmap** for visualization
+- 
+## Deploying model
+
+* Implemented the model in **Streamlit**.
+* XGB Model will predict whether a patient is at risk of experiencing a heart attack based on their clinical parameters.
+
+## Things to try it out next!
+* Applying crossvalidation concepts in model training
+* Applying Pipeline concepts in model training
+* Trying out other Feature selection methods
+* Using Z scores to treat outliers
+* Applying other classification algorithms
 
 ## References:
 
